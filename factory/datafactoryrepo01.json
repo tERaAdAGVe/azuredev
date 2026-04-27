@@ -1,0 +1,15 @@
+{
+	"name": "datafactoryrepo01",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "32a8c2f3-b074-4471-8b03-27cddc4b376e",
+		"tenantId": "6c01d7e2-ec4e-4b40-8c15-2c9bd6a949da"
+	}
+}
