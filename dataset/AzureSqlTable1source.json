@@ -1,0 +1,24 @@
+{
+	"name": "AzureSqlTable1source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseLinkedservice",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"TableNameDatasetSource": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "AdventureWorksLT",
+			"table": {
+				"value": "@dataset().TableNameDatasetSource",
+				"type": "Expression"
+			}
+		}
+	}
+}
