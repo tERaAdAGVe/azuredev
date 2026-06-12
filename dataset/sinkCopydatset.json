@@ -1,0 +1,29 @@
+{
+	"name": "sinkCopydatset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "bikeLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"SinkFileName": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(dataset().SinkFileName, '.parquet')\n",
+					"type": "Expression"
+				},
+				"fileSystem": "sink"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
